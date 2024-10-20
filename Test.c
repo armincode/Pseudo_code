@@ -1,6 +1,6 @@
 while (process_not_done == true) {
-    // Step 1: Check if blockhash is still valid
-    if (getBlockHeight() <= lastValidBlockHeight) { 
+    // Step 1: Check if blockhash is still valid 
+    if (getBlockHeight() <= lastValidBlockHeight) {               // basically, this condition is a method for checking blockhash expiration in Solana
         // Step 2: Check Transaction Status
         status = getSignatureStatuses(TX_id); // Get status to determine if it's already on the chain
 
