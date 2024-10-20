@@ -35,7 +35,7 @@ while (process_not_done == true) {
     {
         const { blockhash, lastValidBlockHeight } = getRecentBlockhash();
         transaction.recentBlockhash = blockhash;
-        signTransaction(transaction); // Re-sign and fetch transaction with the new blockhash (Should use "getLatestBlockhash RPC Method" for fetching the new blockhash)
+        signTransaction(transaction); // Re-sign transaction and fetch the new blockhash (Should use "getLatestBlockhash RPC Method" for fetching the new one)
 
     }
 }
