@@ -33,7 +33,7 @@ while (process_not_done == true) {
 
     // Step 3: Blockhash is expired, fetch new blockhash and resign transaction
     {
-        const { blockhash, lastValidBlockHeight } = getRecentBlockhash();
+        const { blockhash, lastValidBlockHeight } = getLatestBlockhash();
         transaction.recentBlockhash = blockhash;
         signTransaction(transaction); // Re-sign transaction and fetch the new blockhash (Should use "getLatestBlockhash RPC Method" for fetching the new one)
 
